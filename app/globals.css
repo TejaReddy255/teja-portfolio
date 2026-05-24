@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+
+:root {
+  --bg: #060C1A;
+  --bg2: #0D1528;
+  --card: #0F1C34;
+  --blue: #4A8BF4;
+  --cyan: #00CFDA;
+  --amber: #F5A623;
+  --green: #22C87A;
+  --muted: #7A8BAD;
+  --text: #E8EDF8;
+  --border: rgba(74,139,244,0.15);
+  --border2: rgba(74,139,244,0.3);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+}
+
+.font-display { font-family: 'Syne', sans-serif; }
+.font-mono    { font-family: 'JetBrains Mono', monospace; }
+
+/* gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--blue), var(--cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* grid bg */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(74,139,244,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(74,139,244,0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* glow */
+.glow-blue  { box-shadow: 0 0 24px rgba(74,139,244,0.25); }
+.glow-cyan  { box-shadow: 0 0 24px rgba(0,207,218,0.25); }
+
+/* scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
